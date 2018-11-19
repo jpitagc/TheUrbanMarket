@@ -1,0 +1,60 @@
+
+*{
+	font-family: Allerta;
+	src: url(Allerta-Regular.ttf);
+}
+
+p{
+	display: inline-flex;
+	margin-top: 50px;
+	font-size: 25px;
+	margin-right: 50px;
+	margin-left: 50px;
+}
+
+.upperbanner{
+	margin-top: -8px;
+	margin-left: -8px;
+	margin-right: -8px;
+	display: flex;
+	justify-content: flex-end;
+	background-color: #C0C0C0;
+	height: 40px;
+}
+
+#carrito{
+	margin-right: 30px;
+}
+
+#user{
+}
+
+#favs{
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.mainmenu{
+	display: inline-flex;
+}
+
+#logo{
+	width: 400px;
+	margin-top: 15px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	margin-right: 300px;
+}
+
+.cuerpo{
+
+}
+
+.destacados{
+
+}
+
+.footer{
+	margin: 0%;
+	background-color: #C0C0C0;
+}
