@@ -74,14 +74,20 @@ p{
 
 
 #carrito{
+	display: flex;
+    align-items: center;
 	margin-right: 30px;
 
 }
 
 #user{
+	 display: flex;
+    align-items: center;
 }
 
 #favs{
+	display: flex;
+    align-items: center;
 	margin-left: 30px;
 	margin-right: 30px;
 }
