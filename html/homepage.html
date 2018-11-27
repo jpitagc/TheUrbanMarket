@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang=es>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 <link rel="stylesheet" href="../style/styles.css" type="text/css">
 <link rel="shortcut icon" href="">
 <link href="https://fonts.googleapis.com/css?family=Allerta" rel="stylesheet">
-<script src="script/script.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../javascript/javascript.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <head>
@@ -14,6 +17,8 @@
 
 
 <body class="col-11">
+
+<main>
 	<div class="upperbanner">
 		<i class="fa fa-shopping-cart" id="carrito"></i>	
 		<i class="fa fa-user" id="user"></i>
@@ -25,7 +30,7 @@
 			<img src="../images/logo.jpg" id="logo" class="col-8">
 		</div>
 
-		<div>
+		<div id="nav">
 			<p>Sneakers</p>
 			<p>Calendar</p> 
 			<p>Blog</p>
@@ -41,37 +46,79 @@
 
 		<div class="destacados">
 
+
+          <div id="fila de zapas">
 		   <div class="rectangulo">
-		   	      <!-- <img src="../images/zupaaleatoria.jpg"> -->
+		        <div class="sneakerbrand">Nike</div>
+		   	    <img src="../images/Nike-Air-Max-1-97-Sean-Wotherspoon-AJ4219-400.png" class="col-10 sneaker">
+		   	    <div class="sneakername">Air Max 97x S. Wotherspoon</div>
 		   </div>
 		    <div class="rectangulo">
-		   	      <!-- <img src="../images/zupaaleatoria.jpg"> -->
+		        <div class="sneakerbrand">Nike</div>
+		   	    <div><img src="../images/Nike-Air-Max-1-OG-Red.png" class="col-10 sneaker"></div>
+		   	    <div class="sneakername">Air Max 1Bday</div>  
+
 		   </div>
-		    <div class="rectangulo">
-		   	      <!-- <img src="../images/zupaaleatoria.jpg"> -->
+		    <div class="rectangulo rectangulo_iz">
+		   	    <div class="sneakerbrand">Balenciaga</div>
+		   	    <img src="../images/Balenciaga-Triple-S-Blue-Red.png" class="col-10 sneaker">
+		   	    <div class="sneakername">Triple S Blue Red</div>
 		   </div>
+         </div>
+
+
+
+
 
 		    <div>
 		     	<img src="../images/novedades.jpg" class="imagenes_novedades col-12">
 		     </div>
 
-		     <div class="rectangulo">
-		   	      <!-- <img src="../images/zupaaleatoria.jpg"> -->
+         
+
+         <div id="fila de zapas">
+		   <div class="rectangulo">
+		        <div class="sneakerbrand">Supreme</div>
+		   	    <img src="../images/Supreme-x-Nike-Air-More-Uptempo-Suptempo-Red.png" class="col-10 sneaker">
+		   	    <div class="sneakername">More Uptempo Suptempo Red</div>
 		   </div>
 		    <div class="rectangulo">
-		   	      <!-- <img src="../images/zupaaleatoria.jpg"> -->
+		        <div class="sneakerbrand">Adidas</div>
+		   	    <img src="../images/Pharrell-Williams-x-adidas-NMD-Hu-Trail-Pale-Nude-AC7361-1.png" class="col-10 sneaker">
+		   	    <div class="sneakername">Human Race x Pharrel Williams</div>  
+
 		   </div>
-		    <div class="rectangulo">
-		   	      <!-- <img src="../images/zupaaleatoria.jpg"> -->
+		    <div class="rectangulo rectangulo_iz">
+		   	    <div class="sneakerbrand">Jordan</div>
+		   	    <img src="../images/Jordan-5-Red-Suede-1.png" class="col-10 sneaker">
+		   	    <div class="sneakername">5 Red Suede</div>
 		   </div>
+         </div>
+
+
+
+
+          
+		    
 
 		</div>
 
 	</div>
+</main>
 
+	<footer class="col-12">
+	  <li class="sociallogo">
+          <img src="../images/facebook.png" id="socialfacebook">
+          <img src="../images/twitter.png" id="socialtwitter">
+          <img src="../images/instagram.png" id="socialinstagram">
+      </li>
 
-	<div class="footer">
-	</div>
+      <li id="faq">
+      	<p>About Us</p>
+      	<p>FAQ</p>
+      	<p>Contact</p>
+      </li>
+	</footer>
 
 </body>
 </html>
