@@ -5,10 +5,15 @@
 	box-sizing: border-box;
 
 }
+
+html{
+	width: 100%;
+}
  body{
-	padding-top: 10px;
+	
 	margin-left: 4.166667%;
-	margin-right:4.166667%;
+	margin-right: 4.166667%;
+	max-width: 900px;
 		
 }
 
@@ -69,10 +74,13 @@ p{
     margin-top: 32px;
     font-size: 20px;
     margin-right: 25px;
-    margin-left: 34px;
+    margin-left: 12px;
 }
 
-
+#nav{
+	display: inline;
+	margin-left: 30px;
+}
 
 
 #carrito{
@@ -133,6 +141,42 @@ p{
     margin-top: -17px;
 
 }
+
+#div-buscador{
+	margin-left: 12px;
+	margin-top: 35px;
+	float: right;
+
+}
+#buscador{
+	
+	border-width: 3px;
+	margin-top:4%;
+	background-color: #C0C0C0;
+	border-radius: 10px;
+	height: 27px;
+	width: 200px;
+	
+}
+
+#searchicon{
+	float: right;
+	width: 20px;
+	height: 20px;
+	margin-top: 4px;
+    margin-right: 2px;
+
+}
+
+#buscador-input{
+	
+	background-color: #C0C0C0;
+	border-width: 0;
+	margin-left: 10%;
+	margin-top: 3%;
+	outline: none;
+}
+
 
 .upperbanner{
 	margin-top: -8px;
@@ -202,16 +246,8 @@ footer {
 	margin-top: 20px;
 	background-color: white;
 }
-.mainmenu{
-	display: inline-flex;
-}
-.cuerpo{
 
-}
 
-.destacados{
-
-}
 
 .footer{
 	margin: 0%;
