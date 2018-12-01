@@ -34,7 +34,7 @@
 
 		<div id="nav" class="col-5" >
 			<p>Sneakers</p>
-			<p>Calendar</p> 
+			<p><a href="#calendar">Calendar</a></p> 
 			<p>Blog</p>
 		</div>
 
@@ -54,12 +54,18 @@
 	<div class="cuerpo">
 		<div id="novedades">
 		     <div>
-		     	<img src="../images/megabanner.jpg" class="imagenes_novedades col-12">
+		     	<img src="../images/megabanner.jpg" id="anuncios" class="imagenes_novedades col-12">
+		     </div>
+		     <div id="imagesselector">
+		     	     <div class="circulo" id="circulo0"> </div>
+		     	     <div class="circulo" id="circulo1"> </div>
+		     	     <div class="circulo" id="circulo2"> </div>
 		     </div>
 		</div>
 
-		<div class="destacados">
 
+
+		<div class="destacados">
 
           <div id="fila de zapas">
 		   <div class="rectangulo">
@@ -141,37 +147,37 @@
 				  <li></li>
 				  <li></li>
 				  <li></li>
-				  <li>1</li>
-				  <li>2</li>
-				  <li>3</li>
-				  <li><span class="active">4</span></li>
-				  <li>5</li>
-				  <li>6</li>
-				  <li>7</li>
-				  <li><span class="event">8</span></li>
-				  <li>9</li>
-				  <li>10</li>
-				  <li>11</li>
-				  <li>12</li>
-				  <li><span class="event">13</span></li>
-				  <li>14</li>
-				  <li>15</li>
-				  <li><span class="event">16</span></li>
-				  <li>17</li>
-				  <li>18</li>
-				  <li>19</li>
-				  <li>20</li>
-				  <li>21</li>
-				  <li>22</li>
-				  <li>23</li>
-				  <li>24</li>
-				  <li><span class="event">25</span></li>
-				  <li>26</li>
-				  <li>27</li>
-				  <li>28</li>
-				  <li>29</li>
-				  <li>30</li>
-				  <li>31</li>
+				  <li onclick="actualizardia(this)">1</li>
+				  <li onclick="actualizardia(this)">2</li>
+				  <li onclick="actualizardia(this)">3</li>
+				  <li onclick="actualizardia(this)"><span id="active">4</span></li>
+				  <li onclick="actualizardia(this)">5</li>
+				  <li onclick="actualizardia(this)">6</li>
+				  <li onclick="actualizardia(this)">7</li>
+				  <li onclick="actualizardia(this)"><span class="event">8</span></li>
+				  <li onclick="actualizardia(this)">9</li>
+				  <li onclick="actualizardia(this)">10</li>
+				  <li onclick="actualizardia(this)">11</li>
+				  <li onclick="actualizardia(this)">12</li>
+				  <li onclick="actualizardia(this)"><span class="event">13</span></li>
+				  <li onclick="actualizardia(this)">14</li>
+				  <li onclick="actualizardia(this)">15</li>
+				  <li onclick="actualizardia(this)"><span class="event">16</span></li>
+				  <li onclick="actualizardia(this)">17</li>
+				  <li onclick="actualizardia(this)">18</li>
+				  <li onclick="actualizardia(this)">19</li>
+				  <li onclick="actualizardia(this)">20</li>
+				  <li onclick="actualizardia(this)">21</li>
+				  <li onclick="actualizardia(this)">22</li>
+				  <li onclick="actualizardia(this)">23</li>
+				  <li onclick="actualizardia(this)">24</li>
+				  <li onclick="actualizardia(this)"><span class="event">25</span></li>
+				  <li onclick="actualizardia(this)">26</li>
+				  <li onclick="actualizardia(this)">27</li>
+				  <li onclick="actualizardia(this)">28</li>
+				  <li onclick="actualizardia(this)">29</li>
+				  <li onclick="actualizardia(this)">30</li>
+				  <li onclick="actualizardia(this)">31</li>
 				</ul>
 
            </div>
@@ -179,7 +185,7 @@
            <div id="announcements" class="col-3">
            	     <div class="month">      
 	              <ul> 
-	               <li>December 4Th </li>
+	               <li id="diadelmes">December 4Th </li>
 	              </ul>
                  </div>
            </div>
