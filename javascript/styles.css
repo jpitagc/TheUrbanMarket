@@ -1,0 +1,450 @@
+*{
+    font-family: 'Allerta', sans-serif;
+}
+html, body{
+	height: 10000px;
+	
+}
+
+/*Responsive Web Page*/
+
+[class*="col-"] {
+    float: left;
+    
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+@media only screen and (max-width: 768px) {
+
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width:50% 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+
+    div.desaparece-tab{
+      display: none;
+    }
+
+ }
+
+
+p{
+	float: left;
+    display: inline-block;
+    margin-top: 32px;
+    font-size: 20px;
+    margin-right: 25px;
+    margin-left: 34px;
+}
+
+.links{
+    
+}
+
+#carrito{
+    display: flex;
+    align-items: center;
+	margin-right: 30px;
+
+}
+
+#user{
+    display: flex;
+    align-items: center;
+}
+
+#favs{
+    display: flex;
+    align-items: center;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+#logo{
+	display: inline;
+	margin-top: 15px;
+	margin-bottom: 5px;
+	margin-left: 35px;	
+	
+}
+.upperbanner{
+	margin-top: -8px;
+	margin-left: -8px;
+	margin-right: -8px;
+	display: flex;
+	justify-content: flex-end;
+	background-color: #C0C0C0;
+	height: 40px;
+
+}
+.rectangulo{
+	float: right;
+    margin-left: 20px;
+    margin-right: 15px;
+    border-radius: 3px;
+    margin-top: 30px;
+    background-color: #eaeaea;
+    width: 30%;
+    height: 277px;
+}
+
+.imagenes_novedades{
+	margin-top: 20px;
+	background-color: white;
+}
+
+.mainmenu{
+	display: inline-flex;
+}
+.cuerpo{
+
+}
+
+.destacados{
+
+}
+
+.footer{
+	margin: 0%;
+	background-color: #C0C0C0;
+}
+
+
+
+.separador{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #C0C0C0;
+    font-size: 20px;
+    height: 40px;
+    margin-top: 20px;
+}
+
+#blog{
+    margin-left: 20px;
+}
+
+.articulo{
+    margin-left: 60px;
+    border-radius: 3px;
+    margin-top: 30px;
+    background-color: #eaeaea;
+    width: 90%;
+    height: auto;
+}
+
+.imgarticulo{
+    float: left;
+    margin-left: 20px;
+    margin-right: 30px;
+    margin-top: 37px;
+    margin-bottom: 20px;
+    width: 20%;
+    height: 80%;
+}
+
+.tituloarticulo{
+    font-size: 40px;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.contenidoarticulo{
+    margin-right: 30px;
+}
+
+
+
+
+
+/***********************************************PITA********************************************************************/
+
+*{
+    font-family: Allerta;
+    src: url(Allerta-Regular.ttf);
+    box-sizing: border-box;
+
+}
+
+html{
+    width: 100%;
+}
+ body{
+    
+    margin-left: 4.166667%;
+    margin-right: 4.166667%;
+    max-width: 900px;
+        
+}
+
+/*Responsive Web Page*/
+
+[class*="col-"] {
+    float: left;
+    
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+@media only screen and (max-width: 768px) {
+
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width:50% 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+
+    div.desaparece-tab{
+      display: none;
+    }
+
+ }
+
+
+p{
+    float: left;
+    display: inline-block;
+    margin-top: 32px;
+    font-size: 20px;
+    margin-right: 25px;
+    margin-left: 12px;
+}
+
+#nav{
+    display: inline;
+    margin-left: 30px;
+}
+
+
+#carrito{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+
+}
+
+#user{
+     display: flex;
+    align-items: center;
+}
+
+#favs{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+ .sociallogo{
+    display: right;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 14px;
+ }
+
+ #socialinstagram{
+    display: right;
+    width: 30px;
+    height: 30px;
+    margin-left: 35px;
+ }
+ #socialfacebook{
+    width: 30px;
+    height: 30px;
+ }
+ #socialtwitter{
+    width: 30px;
+    height: 30px;
+    margin-left: 35px;
+ }
+
+#logo{
+    
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 35px;
+    
+    
+}
+
+#faq{
+    float: right;
+    display: inline-block;
+    size: 10;
+    color: black;
+    margin-top: -17px;
+
+}
+
+#div-buscador{
+    margin-left: 12px;
+    margin-top: 35px;
+    float: right;
+
+}
+#buscador{
+    
+    border-width: 3px;
+    margin-top:4%;
+    background-color: #C0C0C0;
+    border-radius: 10px;
+    height: 27px;
+    width: 200px;
+    
+}
+
+#searchicon{
+    float: right;
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+    margin-right: 2px;
+
+}
+
+#buscador-input{
+    
+    background-color: #C0C0C0;
+    border-width: 0;
+    margin-left: 10%;
+    margin-top: 3%;
+    outline: none;
+}
+
+
+
+.upperbanner{
+    margin-top: -8px;
+    margin-left: -8px;
+    margin-right: -8px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #C0C0C0;
+    height: 40px;
+
+}
+
+
+
+.zapatilla{
+    width: 50px;
+    height: 50px;
+}
+
+footer {
+    
+    background-color: #C0C0C0;
+    height: 60px;
+    margin-top: 20px;
+
+}
+
+
+
+.rectangulo{
+    float: left;
+    margin-left: 0px;
+    margin-right: 15px;
+    border-radius: 3px;
+    margin-top: 30px;
+    background-color: #eaeaea;
+    width: 32%;
+    height: 240px;
+}
+
+.sneaker{
+   margin-left: 8.333%;
+   margin-right: 8.333%;
+   margin-bottom: 10px; 
+   
+}
+
+.sneakerbrand{
+    color: grey;
+    font-size: 20px;
+    margin-bottom: 0;
+    margin-top:20px;
+    margin-left: 32px;
+}
+.sneakername{
+   width: 100%;
+   text-align: center;
+    color: black;
+    
+    font-size: 15px;
+    
+    
+}
+.rectangulo_iz{
+    margin-right: 0px;
+}
+
+.imagenes_novedades{
+    margin-top: 20px;
+    background-color: white;
+}
+
+
+
+.footer{
+    margin: 0%;
+    background-color: #C0C0C0;
+}
+
+
