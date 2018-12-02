@@ -31,6 +31,8 @@ function changeimage (){
 
 
 function actualizardia(x){
+
+	var prueba;
     var dia = x.innerHTML;
     var acro = "TH";
     if (dia == "1" || dia == "21" || dia == "31") { acro = "ST"}
