@@ -20,20 +20,110 @@
 
 <main>
 
-   <div >
+   
 	<div class="upperbanner">
 		<i class="fa fa-shopping-cart" id="carrito"></i>	
 		<i class="fa fa-user" id="user"></i>
 		<i class="fa fa-star" id="favs"></i>
 	</div>
+   
+   <!-- FILTERS -->
+
+   <div id="filters">
+
+         <div id="filters_price">
+   	      <h4>Price</h4>
+   	      <div class="slidecontainer">
+           <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+          </div>
+        </div>
+
+
+
+        <div id="filters_brand">
+
+   	      <h4>Brand</h4>
+
+   	       <form id="marca_form">
+
+   	          <div class="filademarcas">
+   	       	  <input type="checkbox" name=""> Adidas <br>
+   	       	  <input type="checkbox" name=""> Nike <br>
+   	       	  <input type="checkbox" name=""> Reebook <br>
+              </div>
+
+              <div class="filademarcas">
+   	       	  <input type="checkbox" name=""> Jordan <br>
+   	       	  <input type="checkbox" name=""> Bansky<br>
+   	       	  <input type="checkbox" name=""> Vans <br>
+              </div>
+
+              <div class="filademarcas">
+   	       	  <input type="checkbox" name=""> Puma<br>
+   	       	  <input type="checkbox" name=""> Fila <br>
+   	       	  <input type="checkbox" name=""> Kappa <br>
+              </div>
+   	       </form>
+
+   	    </div>
+   	    
+
+   	    <div id="filters_color">   
+
+   	      <h4>Colour</h4>
+   	          <form id="colores_form">
+
+   	          <div class="filadecolores">
+   	       	  <input type="checkbox" name=""> Blue <br>
+   	       	  <input type="checkbox" name=""> Green <br>
+   	       	 
+              </div>
+
+              <div class="filadecolores">
+   	       	  <input type="checkbox" name=""> Red <br>
+   	       	  <input type="checkbox" name=""> Yellow<br>
+   	       	 
+              </div>
+
+              <div class="filadecolores">
+   	       	  <input type="checkbox" name=""> Grey<br>
+   	       	  <input type="checkbox" name=""> Black <br>
+   	       	  
+              </div>
+   	       </form>
+
+   	    </div>   
+
+        <div id="filters_size">
+   	      <h4>Size</h4>
+   	       <div id="filadetallas">
+   	        <div class="talla" onclick="selectSize(this)">37</div>
+   	        <div class="talla" onclick="selectSize(this)">38</div>
+   	        <div class="talla" onclick="selectSize(this)">39</div>
+   	        <div class="talla" onclick="selectSize(this)">40</div>
+   	        <div class="talla" onclick="selectSize(this)">41</div>
+   	        <div class="talla" onclick="selectSize(this)">42</div>
+   	        <div class="talla" onclick="selectSize(this)">43</div>
+   	        <div class="talla" onclick="selectSize(this)">44</div>
+   	        <div class="talla" onclick="selectSize(this)">45</div>
+   	        <div class="talla" onclick="selectSize(this)">46</div>
+   	       </div>
+
+   	    </div>
+
+         <div id="apply" onclick="applyFliters()"> APPLY</div>
+
+   </div>
+
+
 
 	<div class="mainmenu">
 		<div>
-			<img src="../images/logo.jpg" id="logo" class="col-3">
+			<img src="../images/logo.jpg" id="logo" class="col-3" onclick="goHome()">
 		</div>
 
 		<div id="nav" class="col-5" >
-			<p>Sneakers</p>
+			<p onclick="appearFilters()" id="filt">Filters</p>
 			<p><a href="#calendar">Calendar</a></p> 
 			<p>Blog</p>
 		</div>
@@ -41,17 +131,22 @@
 		<div id="div-buscador col-2">
             
 			<div id="buscador" class="col-1">
-			  <input type="text" name="search" placeholder="Search" class="col-8" id="buscador-input">
+			  <input type="text" name="search" placeholder="Search" class="col-8" id="buscador-input" onkeypress="search(this)">
 			  <img src="../images/searchicon.png" id="searchicon"> 
 			</div>
 			
 
 		</div>
 	</div>
-    </div>
+    
 
 
-	<div class="cuerpo">
+
+
+
+
+
+	<div id="cuerpo">
 		<div id="novedades">
 		     <div>
 		     	<img src="../images/megabanner.jpg" id="anuncios" class="imagenes_novedades col-12">
@@ -116,6 +211,29 @@
          </div>
            
 
+          <div id="fila de zapas">
+		   <div class="rectangulo">
+		        <div class="sneakerbrand">Adidas</div>
+		   	    <img src="../images/cp9654_1.png" class="col-10 sneaker">
+		   	    <div class="sneakername">Yeezy Boost 350 V2</div>
+		   </div>
+		    <div class="rectangulo">
+		        <div class="sneakerbrand">Nike</div>
+		   	    <img src="../images/Nike-Zoom-Vapor-Air-Jordan-3-Atmos-Black-Jade-709998-031.png" class="col-10 sneaker">
+		   	    <div class="sneakername">Zoom Vapor AJ3 Atmos Black Jade</div>  
+
+		   </div>
+		    <div class="rectangulo rectangulo_iz">
+		   	    <div class="sneakerbrand">Jordan</div>
+		   	    <img src="../images/Jordan-5-Red-Suede-1.png" class="col-10 sneaker">
+		   	    <div class="sneakername">5 Red Suede</div>
+		   </div>
+         </div>
+           
+
+
+
+
            <!-- CALENDAR -->
  
            <div class="col-8" id="calendar">
@@ -140,44 +258,44 @@
 			  <li>Su</li>
 			</ul>
 
-				<ul class="days">  
+				<ul class="days" id= "fechadehoy">  
 				  <li></li>
 				  <li></li>
 				  <li></li>
 				  <li></li>
+				  <li></li>   
 				  <li></li>
-				  <li></li>
-				  <li onclick="actualizardia(this)">1</li>
-				  <li onclick="actualizardia(this)">2</li>
-				  <li onclick="actualizardia(this)">3</li>
-				  <li onclick="actualizardia(this)"><span id="active">4</span></li>
-				  <li onclick="actualizardia(this)">5</li>
-				  <li onclick="actualizardia(this)">6</li>
-				  <li onclick="actualizardia(this)">7</li>
+				  <li onclick="actualizardia(this)"> <span>1</span> </li>
+				  <li onclick="actualizardia(this)"> <span>2</span> </li>
+				  <li onclick="actualizardia(this)"> <span>3</span> </li>
+				  <li onclick="actualizardia(this)"><span>4</span></li>
+				  <li onclick="actualizardia(this)"> <span>5</span> </li>
+				  <li onclick="actualizardia(this)"> <span>6</span> </li>
+				  <li onclick="actualizardia(this)"> <span>7</span> </li>
 				  <li onclick="actualizardia(this)"><span class="event">8</span></li>
-				  <li onclick="actualizardia(this)">9</li>
-				  <li onclick="actualizardia(this)">10</li>
-				  <li onclick="actualizardia(this)">11</li>
-				  <li onclick="actualizardia(this)">12</li>
+				  <li onclick="actualizardia(this)"> <span>9</span> </li>
+				  <li onclick="actualizardia(this)"> <span>10</span> </li>
+				  <li onclick="actualizardia(this)"> <span>11</span> </li>
+				  <li onclick="actualizardia(this)"> <span>12</span> </li>
 				  <li onclick="actualizardia(this)"><span class="event">13</span></li>
-				  <li onclick="actualizardia(this)">14</li>
-				  <li onclick="actualizardia(this)">15</li>
+				  <li onclick="actualizardia(this)"> <span>14</span> </li>
+				  <li onclick="actualizardia(this)"> <span>15</span> </li>
 				  <li onclick="actualizardia(this)"><span class="event">16</span></li>
-				  <li onclick="actualizardia(this)">17</li>
-				  <li onclick="actualizardia(this)">18</li>
-				  <li onclick="actualizardia(this)">19</li>
-				  <li onclick="actualizardia(this)">20</li>
-				  <li onclick="actualizardia(this)">21</li>
-				  <li onclick="actualizardia(this)">22</li>
-				  <li onclick="actualizardia(this)">23</li>
-				  <li onclick="actualizardia(this)">24</li>
+				  <li onclick="actualizardia(this)"> <span>17</span> </li>
+				  <li onclick="actualizardia(this)"> <span>18</span> </li>
+				  <li onclick="actualizardia(this)"> <span>19</span> </li>
+				  <li onclick="actualizardia(this)"> <span>20</span> </li>
+				  <li onclick="actualizardia(this)"> <span>21</span> </li>
+				  <li onclick="actualizardia(this)"> <span>22</span> </li>
+				  <li onclick="actualizardia(this)"> <span>23</span> </li>
+				  <li onclick="actualizardia(this)"> <span>24</span> </li>
 				  <li onclick="actualizardia(this)"><span class="event">25</span></li>
-				  <li onclick="actualizardia(this)">26</li>
-				  <li onclick="actualizardia(this)">27</li>
-				  <li onclick="actualizardia(this)">28</li>
-				  <li onclick="actualizardia(this)">29</li>
-				  <li onclick="actualizardia(this)">30</li>
-				  <li onclick="actualizardia(this)">31</li>
+				  <li onclick="actualizardia(this)"> <span>26</span> </li>
+				  <li onclick="actualizardia(this)"> <span>27</span> </li>
+				  <li onclick="actualizardia(this)"> <span>28</span> </li>
+				  <li onclick="actualizardia(this)"> <span>29</span> </li>
+				  <li onclick="actualizardia(this)"> <span>30</span> </li>
+				  <li onclick="actualizardia(this)"> <span>31</span> </li>
 				</ul>
 
            </div>
@@ -188,6 +306,19 @@
 	               <li id="diadelmes">December 4Th </li>
 	              </ul>
                  </div>
+
+                 <div id="announcements_info">
+                 	   <h1 id="no_announcements">NO ANNOUCEMENTS FOR THIS DAY</h1>
+                 	   <div id="dia25_announcements">
+                         
+                             
+                 	   	     <li>Air Jordan Retro</li>
+                 	   	     <img class="announcements_img" src="../images/airjordanretro.jpg">
+
+                 	   	     <li>Adidas UltraBoost LTD</li>
+                 	   	     <img class="announcements_img" src="../images/adidasultraboost.jpg">
+                 	   </div>
+                 </div>
            </div>
 
         
@@ -195,6 +326,84 @@
 		</div>
 
 	</div>
+
+    
+
+    <div id="search_done">
+    	<div class="rectangulo">
+		        <div class="sneakerbrand">Supreme</div>
+		   	    <img src="../images/Supreme-x-Nike-Air-More-Uptempo-Suptempo-Red.png" class="col-10 sneaker">
+		   	    <div class="sneakername">More Uptempo Suptempo Red</div>
+		   </div>
+		    <div class="rectangulo">
+		        <div class="sneakerbrand">Adidas</div>
+		   	    <img src="../images/Pharrell-Williams-x-adidas-NMD-Hu-Trail-Pale-Nude-AC7361-1.png" class="col-10 sneaker">
+		   	    <div class="sneakername">Human Race x Pharrel Williams</div>  
+
+		   </div>
+		    <div class="rectangulo rectangulo_iz">
+		   	    <div class="sneakerbrand">Jordan</div>
+		   	    <img src="../images/Jordan-5-Red-Suede-1.png" class="col-10 sneaker">
+		   	    <div class="sneakername">5 Red Suede</div>
+		   </div>
+		   <div class="rectangulo">
+		        <div class="sneakerbrand">Supreme</div>
+		   	    <img src="../images/Supreme-x-Nike-Air-More-Uptempo-Suptempo-Red.png" class="col-10 sneaker">
+		   	    <div class="sneakername">More Uptempo Suptempo Red</div>
+		   </div>
+		    <div class="rectangulo">
+		        <div class="sneakerbrand">Adidas</div>
+		   	    <img src="../images/Pharrell-Williams-x-adidas-NMD-Hu-Trail-Pale-Nude-AC7361-1.png" class="col-10 sneaker">
+		   	    <div class="sneakername">Human Race x Pharrel Williams</div>  
+
+		   </div>
+		    <div class="rectangulo rectangulo_iz">
+		   	    <div class="sneakerbrand">Jordan</div>
+		   	    <img src="../images/Jordan-5-Red-Suede-1.png" class="col-10 sneaker">
+		   	    <div class="sneakername">5 Red Suede</div>
+		   </div>
+		   <div class="rectangulo">
+		        <div class="sneakerbrand">Supreme</div>
+		   	    <img src="../images/Supreme-x-Nike-Air-More-Uptempo-Suptempo-Red.png" class="col-10 sneaker">
+		   	    <div class="sneakername">More Uptempo Suptempo Red</div>
+		   </div>
+		    <div class="rectangulo">
+		        <div class="sneakerbrand">Adidas</div>
+		   	    <img src="../images/Pharrell-Williams-x-adidas-NMD-Hu-Trail-Pale-Nude-AC7361-1.png" class="col-10 sneaker">
+		   	    <div class="sneakername">Human Race x Pharrel Williams</div>  
+
+		   </div>
+		    <div class="rectangulo rectangulo_iz">
+		   	    <div class="sneakerbrand">Jordan</div>
+		   	    <img src="../images/Jordan-5-Red-Suede-1.png" class="col-10 sneaker">
+		   	    <div class="sneakername">5 Red Suede</div>
+		   </div>
+		   <div class="rectangulo">
+		        <div class="sneakerbrand">Supreme</div>
+		   	    <img src="../images/Supreme-x-Nike-Air-More-Uptempo-Suptempo-Red.png" class="col-10 sneaker">
+		   	    <div class="sneakername">More Uptempo Suptempo Red</div>
+		   </div>
+		    <div class="rectangulo">
+		        <div class="sneakerbrand">Adidas</div>
+		   	    <img src="../images/Pharrell-Williams-x-adidas-NMD-Hu-Trail-Pale-Nude-AC7361-1.png" class="col-10 sneaker">
+		   	    <div class="sneakername">Human Race x Pharrel Williams</div>  
+
+		   </div>
+		    <div class="rectangulo rectangulo_iz">
+		   	    <div class="sneakerbrand">Jordan</div>
+		   	    <img src="../images/Jordan-5-Red-Suede-1.png" class="col-10 sneaker">
+		   	    <div class="sneakername">5 Red Suede</div>
+		   </div>
+
+    </div>
+
+
+
+
+
+
+
+
 </main>
 
 	<footer class="col-12">

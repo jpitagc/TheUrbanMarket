@@ -80,11 +80,22 @@ p{
     font-size: 20px;
     margin-right: 25px;
     margin-left: 12px;
+} 
+
+#cuerpo{
+	display: block;
 }
 
+#search_done{
+	display: none;
+}
 #nav{
 	display: inline;
 	margin-left: 30px;
+}
+
+#nav p{
+	cursor: pointer;
 }
 
 
@@ -128,12 +139,16 @@ p{
  	height: 30px;
  	margin-left: 35px;
  }
+/* #filt{
+ 	display: none;
+ }*/
 
 #logo{
 	
 	margin-top: 15px;
 	margin-bottom: 5px;
 	margin-left: 35px;
+	cursor: pointer;
 	
 	
 }
@@ -182,8 +197,30 @@ p{
 	outline: none;
 }
 
+#no_announcements{
+	text-align: center;
+	margin-top: 43px;
+}
+ #announcements_info{
+ 	display: block;
+ }
+
+ #dia25_announcements{
+ 	
+    display: none;
+    text-align: center;
+    list-style-type: none;
+ }
+
+ #dia25_announcements li{
+     margin-top: 15px;
+ }
 
 
+.announcements_img{
+	width: 70px;
+	height: 70px;
+}
 .upperbanner{
 	margin-top: -8px;
 	margin-left: -8px;
@@ -195,6 +232,9 @@ p{
 
 }
 
+.upperbanner i {
+cursor: pointer;
+}
 
 
 .zapatilla{
@@ -215,7 +255,7 @@ footer {
 .rectangulo{
 	float: left;
     margin-left: 0px;
-    margin-right: 15px;
+    margin-right: 12px;
     border-radius: 3px;
     margin-top: 30px;
     background-color: #eaeaea;
@@ -246,9 +286,10 @@ footer {
 	
 	
 }
-.rectangulo_iz{
+
+/*.rectangulo_iz{
 	margin-right: 0px;
-}
+}*/
 
 .imagenes_novedades{
 	margin-top: 20px;
@@ -284,6 +325,9 @@ footer {
 
 
 /* CALENDARIO + ANNOUNCEMENTS*/
+#fechadehoy li span{
+	cursor: pointer;
+}
 #calendar{
 	width: 65.5%;
 	margin-top: 30px;
@@ -376,6 +420,8 @@ ul {list-style-type: none;}
     color: white !important
 }
 
+
+
 /* Add media queries for smaller screens */
 @media screen and (max-width:720px) {
     .weekdays li, .days li {width: 13.1%;}
@@ -433,3 +479,137 @@ ul {list-style-type: none;}
     margin-right: 30px;
 }
 
+
+/* FILTERS +SLIDER*/
+#filters{
+	text-align: center;
+	display: none;
+	width: 30%;
+	list-style-type: none;
+	border-style: solid;
+	border-color: grey;
+	border-width: 2px;
+	border-radius: 3px;
+	padding: 0;
+	position: absolute;
+	background-color: white;
+	margin-top: 80px;
+	margin-left: 147px;
+
+	
+}
+
+#filters h4{
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 0;
+	display: block;
+}
+#marca_form{
+	text-align: left;
+	margin-left: 3px;
+}
+
+.filademarcas{
+	width: 30%;
+	font-size: 10px;
+	float: left;
+	margin-left: 10px;
+	margin-top: 3px;
+	padding-left: 25px;
+}
+
+#colores_form{
+	text-align: left;
+	margin-left: 3px;
+}
+
+.filadecolores{
+	width: 30%;
+	font-size: 10px;
+	float: left;
+	margin-left: 10px;
+	margin-top: 3px;
+	padding-left: 25px;
+}
+#filadetallas{
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+	height: 30px;
+}
+
+.talla{
+    width: 25px;
+    height: 25px;
+	border-style: solid;
+	border-color: grey;
+	border-width: 1px;
+	border-radius: 3px;
+	float: left;
+	margin-left: 10px;
+	background-color: white;
+	cursor: pointer;
+
+}
+
+#filters_price{
+     height: 50px;
+}
+
+#filters_brand{
+	height: 100px;
+	
+}
+#filters_color{
+	height: 80px;
+	
+}
+#filters_size{
+	height: 70px;
+}
+
+#apply{
+	width: 73px;
+	height: 25px;
+	background-color: #eaeaea;
+	margin-left: 157px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	border-radius: 3px;
+	cursor: pointer;
+
+}
+
+
+.slider {
+    -webkit-appearance: none;
+    width: 80%;
+    height: 8px;
+    border-radius: 5px;   
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    background: grey;
+    cursor: pointer;
+    
+
+}
+
+.slider::-moz-range-thumb {
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background: grey;
+    cursor: pointer;
+}
