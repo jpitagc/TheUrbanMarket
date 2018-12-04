@@ -200,3 +200,73 @@ p{
     margin-bottom: 60px;
     font-size: 150px;
 }
+
+.paginazapatilla{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 100vh;
+    margin: auto;
+}
+
+.zapatillagrande{
+    float: left;
+    margin-top: 15%;
+    margin-left: 5%;
+    margin-right: 10%;
+    width: 40%;
+    height: 50%;
+}
+
+.titulopaginazapa{
+    float: left;
+    margin-top: 15%;
+    font-size: 30px;
+}
+
+.tallas{
+    float: right;
+    margin-right: 10%;
+    font-size: 20px;
+}
+
+table {
+    float: right;
+    margin-top: 5%;
+    margin-right: 10%;
+    font-size: 20px;
+    border-collapse: collapse;
+    width: 35%;
+}
+
+td, th {
+    text-align: center;
+    padding: 8px;
+}
+
+.hay{
+    cursor: pointer;
+}
+
+.nohay{
+    cursor: context-menu;
+    color: #eaeaea;
+}
+
+.button {
+    
+    background-color: #C0C0C0;
+    border: none;
+    color: #000000;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-left: 95px;
+    margin-top: 25px;
+}
+
+
