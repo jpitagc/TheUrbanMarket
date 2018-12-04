@@ -96,7 +96,8 @@ function search(element){
 		 
 		for (var i = 0; i <= 14; i++) {
 			document.getElementById("search_done").children[i].style.display = "block";
-    	if(document.getElementById("search_done").children[i].children[2].innerHTML.indexOf(element.value)<0){
+    	if(document.getElementById("search_done").children[i].children[2].innerHTML.indexOf(element.value)<0 && 
+    		document.getElementById("search_done").children[i].children[0].innerHTML.indexOf(element.value)<0){
     		document.getElementById("search_done").children[i].style.display = "none";
     	  }
         }
@@ -111,9 +112,10 @@ function search(element){
 
 var filter = false;
 
-function appearFilters(){
 
-   if(filters === false){
+function appearFilters(){
+ if(document.getElementById("cuerpo").style.display === "none"){
+ 	if(filters === false){
 	document.getElementById("filters").style.display = "block";
 	filters = true;
    }
@@ -121,6 +123,9 @@ function appearFilters(){
    		document.getElementById("filters").style.display = "none";
    		filters = false;
    }
+
+ }
+  else alert("Need to search first to apply filters");
    
 
 }
@@ -133,4 +138,46 @@ function selectSize(x){
    else{
    	 x.style.backgroundColor = "white";
    }
+}
+
+
+function applyButton (){
+	if(document.getElementById("Blue").checked == false)applyColorFilters("Blue");
+	if (document.getElementById("Green").checked == false) applyColorFilters("Green");
+	if (document.getElementById("Red").checked == false) applyColorFilters("Red");
+	if (document.getElementById("Yellow").checked == false) applyColorFilters("Yellow");
+	if (document.getElementById("White").checked == false) applyColorFilters("White");
+	if (document.getElementById("Black").checked == false) applyColorFilters("Black");
+    
+    /*if(document.getElementById("Adidas").checked == false)applyBrandFilters("Adidas");
+	if (document.getElementById("Nike").checked == false) applyBrandFilters("Nike");
+	if (document.getElementById("Reebook").checked == false) applyBrandFilters("Reebook");
+	if (document.getElementById("Jordan").checked == false) applyBrandFilters("Jordan");
+	if (document.getElementById("Bansky").checked == false) applyBrandFilters("Bansky");
+	if (document.getElementById("Vans").checked == false) applyBrandFilters("Vans");
+	if (document.getElementById("Puma").checked == false) applyBrandFilters("Puma");
+    if (document.getElementById("Fila").checked == false) applyBrandFilters("Fila");
+    if (document.getElementById("Kappa").checked == false) applyBrandFilters("Kappa");*/
+  
+     appearFilters();
+
+}
+
+
+function applyColorFilters(color){
+     var x = document.getElementsByClassName(color);
+
+     for (var i = x.length - 1; i >= 0; i--) {
+     	x[i].parentElement.style.display = "none";
+     }
+}
+
+function applyBrandFilters(brand){
+
+	for (var i = 0; i <= document.getElementById("search_done").childElementCount-1 ; i++) {
+	     alert(i);		
+    	if( document.getElementById("search_done").children[i].children[0].innerHTML.indexOf(brand)<0){
+    		document.getElementById("search_done").children[i].style.display = "none";
+    	  }
+        }
 }

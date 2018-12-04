@@ -484,12 +484,12 @@ ul {list-style-type: none;}
 #filters{
 	text-align: center;
 	display: none;
-	width: 30%;
+	width: 370px;
 	list-style-type: none;
 	border-style: solid;
 	border-color: grey;
 	border-width: 2px;
-	border-radius: 3px;
+	border-radius: 25px;
 	padding: 0;
 	position: absolute;
 	background-color: white;
