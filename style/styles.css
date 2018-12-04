@@ -10,18 +10,18 @@ html{
 	width: 100%;
 }
  body{
-	
+
 	margin-left: 4.166667%;
 	margin-right: 4.166667%;
 	max-width: 900px;
-		
+
 }
 
 /*Responsive Web Page*/
 
 [class*="col-"] {
     float: left;
-    
+
 }
 
 .row::after {
@@ -125,12 +125,12 @@ p{
  }
 
 #logo{
-	
+
 	margin-top: 15px;
 	margin-bottom: 5px;
 	margin-left: 35px;
-	
-	
+
+
 }
 
 #faq{
@@ -149,14 +149,14 @@ p{
 
 }
 #buscador{
-	
+
 	border-width: 3px;
 	margin-top:4%;
 	background-color: #C0C0C0;
 	border-radius: 10px;
 	height: 27px;
 	width: 200px;
-	
+
 }
 
 #searchicon{
@@ -169,12 +169,13 @@ p{
 }
 
 #buscador-input{
-	
+
 	background-color: #C0C0C0;
 	border-width: 0;
 	margin-left: 10%;
 	margin-top: 3%;
 	outline: none;
+
 }
 
 
@@ -198,7 +199,7 @@ p{
 }
 
 footer {
-    
+
     background-color: #C0C0C0;
 	height: 60px;
 	margin-top: 20px;
@@ -221,8 +222,8 @@ footer {
 .sneaker{
    margin-left: 8.333%;
    margin-right: 8.333%;
-   margin-bottom: 10px;	
-   
+   margin-bottom: 10px;
+
 }
 
 .sneakerbrand{
@@ -236,10 +237,10 @@ footer {
    width: 100%;
    text-align: center;
 	color: black;
-	
+
 	font-size: 15px;
-	
-	
+
+
 }
 .rectangulo_iz{
 	margin-right: 0px;
@@ -257,8 +258,124 @@ footer {
 	background-color: #C0C0C0;
 }
 
+#loginOrRegister{
+	width: 900px;
+	height: 350px;
+	margin:auto;
+	margin-top:200px;
+	text-align: center;
+	float:left;
+}
 
+button.logOrReg{
+	width:200px;
+	margin:3px;
+	background-color: #C0C0C0;
+	color: white;
+	padding: 14px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
 
+/*FORMULARIO DE LOGEO*/
+
+#formularioLog{
+	width:50%;
+	margin:auto;
+	display:none;
+	justify-content: center;
+}
+
+input[type=submit].formLog{
+	width:200%;
+	background-color: #C0C0C0;
+	color: white;
+	padding: 14px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	margin: auto;
+}
+
+/*FORMULARIO DE REGISTRO*/
+
+#formularioReg{
+	width:50%;
+	margin: auto;
+	display:none;
+}
+
+p.tituloForm{
+	font-size: 18px;
+}
+input[type=text].formReg:focus{
+	border: 3px solid #C0C0C0;
+}
+input[type=email].formReg:focus{
+	border: 3px solid #C0C0C0;
+}
+input[type=password].formReg:focus{
+	border: 3px solid #C0C0C0;
+}
+
+input[type=text].formReg{
+	margin-top: 4px;
+	padding: 5px 5px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	box-sizing: border-box;
+}
+
+input[type=password].formReg{
+	margin-top: 4px;
+	padding: 5px 5px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	box-sizing: border-box;
+}
+input[type=email].formReg{
+	margin-top: 4px;
+	padding: 5px 5px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	box-sizing: border-box;
+
+}
+
+input[type=submit].formReg {
+    width: 200%;
+		margin:3px;
+    background-color: #C0C0C0;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+input[type=reset] {
+    width: 200%;
+		margin:3px;
+    background-color: #C0C0C0;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+input[type=date].formReg{
+	margin-top: 4px;
+	padding: 5px;
+	padding-left: 20px;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	box-sizing: border-box;
+}
 
 /* CALENDARIO + ANNOUNCEMENTS*/
 #calendar{
@@ -271,9 +388,9 @@ footer {
 	width: 32%;
 	border-radius: 3px;
 	height: 285px;
-	background-color: #eaeaea; 
+	background-color: #eaeaea;
 	margin-top: 30px;
-	
+
 }
 
 ul {list-style-type: none;}

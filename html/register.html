@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang=es>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<link rel="stylesheet" href="../style/styles.css" type="text/css">
+<link rel="shortcut icon" href="">
+<link href="https://fonts.googleapis.com/css?family=Allerta" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../javascript/javascript.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+	<title>Urban Market</title>
+	<meta charset="UTF-8">
+</head>
+
+
+<body class="col-12">
+
+<main>
+
+<div>
+ <div class="upperbanner">
+   <i class="fa fa-shopping-cart" id="carrito"></i>
+   <i class="fa fa-user" id="user"></i>
+   <i class="fa fa-star" id="favs"></i>
+ </div>
+
+ <div class="mainmenu">
+   <div>
+     <img src="../images/logo.jpg" id="logo" class="col-3">
+   </div>
+
+   <div id="nav" class="col-5" >
+     <p>Sneakers</p>
+     <p>Calendar</p>
+     <p>Blog</p>
+   </div>
+
+   <div id="div-buscador col-2">
+
+     <div id="buscador" class="col-1">
+       <input type="text" name="search" placeholder="Search" class="col-8" id="buscador-input">
+       <img src="../images/searchicon.png" id="searchicon">
+     </div>
+
+   </div>
+ </div>
+</div>
+
+<div class="cuerpo">
+
+	<div id="loginOrRegister">
+
+		<button type=button class="logOrReg" onclick="showIt(document.getElementById('formularioReg'));hideIt(document.getElementById('loginOrRegister'));">Registrarme</button>
+		<button type=button class="logOrReg" onclick="showIt(document.getElementById('formularioLog'));hideIt(document.getElementById('loginOrRegister'));">Acceder</button>
+
+	</div>
+
+
+
+	<div id="formularioReg">
+  	<form id="registro">
+  		<p class="tituloForm">Nombre <br> <input class="formReg" type="text" name="nombre" size="40" required></p>
+  		<p class="tituloForm">Apellidos <input class="formReg"  type="text" name="apellidos" size="40" required></p>
+			<p class="tituloForm">Fecha de nacimiento <input class="formReg"  type="date" name="fechanac" required></p>
+			<p class="tituloForm">Género:
+				<input type="radio" name="genero" value="h"> Hombre
+				<input type="radio" name="genero" value="m"> Mujer
+				<input type="radio" name="genero" value="x"> Otro
+			</p>
+  		<p class="tituloForm">Correo electrónico <input class="formReg"  type="email" name="correo" size="40" required></p>
+  		<p class="tituloForm">Nombre de usuario <input class="formReg"  type="text" name="username" size="40" required></p>
+			<p class="tituloForm">Contraseña <input class="formReg"  type="password" name="contrasena" size="40" required></p>
+
+
+  		<p class="tituloForm">
+    		<input class="formReg" type="submit" value="Enviar" onclick="putCookie(document.getElementsByTagName('form'));">
+    		<input class="formReg" type="reset" value="Borrar">
+	  	</p>
+
+		</form>
+	</div>
+
+	<div id="formularioLog">
+		<form id="login">
+			<p class="tituloForm">Usuario <br> <input class="formReg" type="text" name="usuarioLog" size ="40" required></p>
+			<p class="tituloForm">Contraseña <input class="formReg"  type="password" name="contrasenaLog" size="40" required></p>
+			<p class="tituloForm"><input class="formLog" type="submit" value="Acceder" onclick="login();"></p>
+		</form>
+	</div>
+
+</div>
+
+
+
+
+</main>
+
+<footer class="col-12">
+	<li class="sociallogo">
+				<img src="../images/facebook.png" id="socialfacebook">
+				<img src="../images/twitter.png" id="socialtwitter">
+				<img src="../images/instagram.png" id="socialinstagram">
+		</li>
+
+		<li id="faq">
+			<p>About Us</p>
+			<p>FAQ</p>
+			<p>Contact</p>
+		</li>
+</footer>
