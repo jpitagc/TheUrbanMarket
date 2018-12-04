@@ -1,7 +1,9 @@
 
 var today = new Date();
 var expiry = new Date(today.getTime() + 365 * 24 * 3600 * 1000); // un año
-var activeUser = null;
+var activeUser = "";
+var carrito = new Array(50);
+var carritoCount = 0;
 
  function setCookie(name, value)
  {
@@ -70,6 +72,21 @@ var activeUser = null;
     }
   }
 
+  function logOut(){
+    activeUser="";
+    carrito=[];
+  }
+
+  function userButton(){
+    if (activeUser==""){
+
+    } else {
+      window.location.href = "/usuario";
+    }
+  }
+
+
+
   function showIt(element){
     element.style.display="block";
   }
@@ -79,5 +96,21 @@ var activeUser = null;
   }
 
   function addShoe(id){
-    setCookie()
+    carrito[carritoCount] = id;
+    carritoCount++;
+
+    return carrito;
+  }
+
+  function removeShoe(id){
+    for (var i=0; i<40; i++){
+      if (carrito[i]==id){
+        for(var j=i; j<40;j++){
+          carrito[j]=carrito[j+1]
+        }
+      }
+    }
+    carritoCount--;
+
+    return carrito;
   }
