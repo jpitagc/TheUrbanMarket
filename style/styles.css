@@ -451,6 +451,7 @@ ul {list-style-type: none;}
 }
 
 .articulo{
+	float: left;
     margin-left: 60px;
     border-radius: 3px;
     margin-top: 30px;
@@ -535,7 +536,8 @@ ul {list-style-type: none;}
 #filadetallas{
 	margin-bottom: 10px;
 	margin-top: 10px;
-	margin-left: 10px;
+	margin-left: 3px;
+    margin-right: 5px;
 	height: 30px;
 }
 
@@ -612,4 +614,206 @@ ul {list-style-type: none;}
     border-radius: 50%;
     background: grey;
     cursor: pointer;
+}
+
+
+
+
+/*ALFONSO*/
+
+
+.separador{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #C0C0C0;
+    font-size: 20px;
+    height: 40px;
+    margin-top: 20px;
+}
+
+#blog{
+    margin-left: 20px;
+}
+
+.articulo{
+    margin-left: 60px;
+    border-radius: 3px;
+    margin-top: 30px;
+    background-color: #eaeaea;
+    width: 90%;
+    height: auto;
+}
+
+.imgarticulo{
+    float: left;
+    margin-left: 20px;
+    margin-right: 30px;
+    margin-top: 37px;
+    margin-bottom: 20px;
+    width: 20%;
+    height: 80%;
+}
+
+.tituloarticulo{
+    font-size: 40px;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.contenidoarticulo{
+    margin-right: 30px;
+}
+
+.userfields{
+    display: flex;
+    align-items: center;
+    margin-left: 7%;
+    border-radius: 3px;
+    margin-top: 30px;
+    background-color: #eaeaea;
+    width: 85%;
+    height: 90px;
+    font-size: 30px;
+    cursor: pointer;
+    float: left;
+}
+
+.biglogo{
+    display: flex;
+    align-items: center;
+    margin-left: 7%;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    font-size: 150px;
+}
+
+#usuario{
+	float: left;
+}
+
+
+
+/*ADRI*/
+
+#loginOrRegister{
+	width: 900px;
+	height: 350px;
+	margin:auto;
+	margin-top:200px;
+	text-align: center;
+	float:left;
+}
+
+button.logOrReg{
+	width:200px;
+	margin:3px;
+	background-color: #C0C0C0;
+	color: white;
+	padding: 14px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+/*FORMULARIO DE LOGEO*/
+
+#formularioLog{
+	width:50%;
+	margin:auto;
+	display:none;
+	justify-content: center;
+	float: left;
+
+}
+
+input[type=submit].formLog{
+	width:200%;
+	background-color: #C0C0C0;
+	color: white;
+	padding: 14px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	margin: auto;
+}
+
+/*FORMULARIO DE REGISTRO*/
+
+#formularioReg{
+	width:50%;
+	margin: auto;
+	display:none;
+	float: left;
+}
+
+p.tituloForm{
+	font-size: 18px;
+}
+input[type=text].formReg:focus{
+	border: 3px solid #C0C0C0;
+}
+input[type=email].formReg:focus{
+	border: 3px solid #C0C0C0;
+}
+input[type=password].formReg:focus{
+	border: 3px solid #C0C0C0;
+}
+
+input[type=text].formReg{
+	margin-top: 4px;
+	padding: 5px 5px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	box-sizing: border-box;
+}
+
+input[type=password].formReg{
+	margin-top: 4px;
+	padding: 5px 5px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	box-sizing: border-box;
+}
+input[type=email].formReg{
+	margin-top: 4px;
+	padding: 5px 5px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	box-sizing: border-box;
+
+}
+
+input[type=submit].formReg {
+    width: 200%;
+		margin:3px;
+    background-color: #C0C0C0;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+input[type=reset] {
+    width: 200%;
+		margin:3px;
+    background-color: #C0C0C0;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+input[type=date].formReg{
+	margin-top: 4px;
+	padding: 5px;
+	padding-left: 20px;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	box-sizing: border-box;
 }

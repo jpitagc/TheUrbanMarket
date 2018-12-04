@@ -22,8 +22,9 @@
 
    
 	<div class="upperbanner">
-		<i class="fa fa-shopping-cart" id="carrito"></i>	
-		<i class="fa fa-user" id="user"></i>
+
+		<i class="fa fa-shopping-cart" id="carrito" onclick="shoppingCart()"></i>	
+		<i class="fa fa-user" id="user" onclick="userButton()"></i>
 		<i class="fa fa-star" id="favs"></i>
 	</div>
    
@@ -75,7 +76,7 @@
 
    	          <div class="filadecolores">
    	       	  <input type="checkbox" name="" id="Blue"> Blue <br>
-   	       	  <input type="checkbox" name="" id="Green"> Green <br>
+   	       	  <input type="checkbox" name="" id="Grey"> Grey <br>
    	       	 
               </div>
 
@@ -125,7 +126,7 @@
 		<div id="nav" class="col-5" >
 			<p onclick="appearFilters()" id="filt">Filters</p>
 			<p><a href="#calendar">Calendar</a></p> 
-			<p>Blog</p>
+			<p onclick="blog()">Blog</p>
 		</div>
 
 		<div id="div-buscador col-2">
@@ -336,7 +337,7 @@
 		   	    <div class="sneakername">More Uptempo Suptempo Red</div>
 		   </div>
 		    <div class="rectangulo">
-		        <div class="sneakerbrand Yellow">Adidas</div>
+		        <div class="sneakerbrand Yellow Adidas">Adidas</div>
 		   	    <img src="../images/Pharrell-Williams-x-adidas-NMD-Hu-Trail-Pale-Nude-AC7361-1.png" class="col-10 sneaker">
 		   	    <div class="sneakername">Human Race x Pharrel Williams</div>  
 
@@ -346,61 +347,66 @@
 		   	    <img src="../images/Jordan-5-Red-Suede-1.png" class="col-10 sneaker">
 		   	    <div class="sneakername">5 Red Suede</div>
 		   </div>
-		   <!-- <div class="rectangulo">
-		        <div class="sneakerbrand">Supreme</div>
-		   	    <img src="../images/Supreme-x-Nike-Air-More-Uptempo-Suptempo-Red.png" class="col-10 sneaker">
-		   	    <div class="sneakername">More Uptempo Suptempo Red</div>
-		   </div>
-		    <div class="rectangulo">
-		        <div class="sneakerbrand">Adidas</div>
-		   	    <img src="../images/Pharrell-Williams-x-adidas-NMD-Hu-Trail-Pale-Nude-AC7361-1.png" class="col-10 sneaker">
-		   	    <div class="sneakername">Human Race x Pharrel Williams</div>  
-
-		   </div>
-		    <div class="rectangulo rectangulo_iz">
-		   	    <div class="sneakerbrand">Jordan</div>
-		   	    <img src="../images/Jordan-5-Red-Suede-1.png" class="col-10 sneaker">
-		   	    <div class="sneakername">5 Red Suede</div>
-		   </div>
+		  
 		   <div class="rectangulo">
-		        <div class="sneakerbrand">Supreme</div>
-		   	    <img src="../images/Supreme-x-Nike-Air-More-Uptempo-Suptempo-Red.png" class="col-10 sneaker">
-		   	    <div class="sneakername">More Uptempo Suptempo Red</div>
+		        <div class="sneakerbrand Grey">Nike</div>
+		   	    <img src="../images/Nike-Air-Max-1-97-Sean-Wotherspoon-AJ4219-400.png" class="col-10 sneaker">
+		   	    <div class="sneakername">Air Max 97x S. Wotherspoon</div>
 		   </div>
 		    <div class="rectangulo">
-		        <div class="sneakerbrand">Adidas</div>
-		   	    <img src="../images/Pharrell-Williams-x-adidas-NMD-Hu-Trail-Pale-Nude-AC7361-1.png" class="col-10 sneaker">
-		   	    <div class="sneakername">Human Race x Pharrel Williams</div>  
+		        <div class="sneakerbrand White">Nike</div>
+		   	    <div><img src="../images/Nike-Air-Max-1-OG-Red.png" class="col-10 sneaker"></div>
+		   	    <div class="sneakername">Air Max 1Bday</div>  
 
 		   </div>
 		    <div class="rectangulo rectangulo_iz">
-		   	    <div class="sneakerbrand">Jordan</div>
-		   	    <img src="../images/Jordan-5-Red-Suede-1.png" class="col-10 sneaker">
-		   	    <div class="sneakername">5 Red Suede</div>
-		   </div>
-		   <div class="rectangulo">
-		        <div class="sneakerbrand">Supreme</div>
-		   	    <img src="../images/Supreme-x-Nike-Air-More-Uptempo-Suptempo-Red.png" class="col-10 sneaker">
-		   	    <div class="sneakername">More Uptempo Suptempo Red</div>
+		   	    <div class="sneakerbrand Grey">Balenciaga</div>
+		   	    <img src="../images/Balenciaga-Triple-S-Blue-Red.png" class="col-10 sneaker">
+		   	    <div class="sneakername">Triple S Blue Red</div>
 		   </div>
 		    <div class="rectangulo">
-		        <div class="sneakerbrand">Adidas</div>
-		   	    <img src="../images/Pharrell-Williams-x-adidas-NMD-Hu-Trail-Pale-Nude-AC7361-1.png" class="col-10 sneaker">
-		   	    <div class="sneakername">Human Race x Pharrel Williams</div>  
-
+		        <div class="sneakerbrand White">Adidas</div>
+		   	    <img src="../images/cp9654_1.png" class="col-10 sneaker">
+		   	    <div class="sneakername">Yeezy Boost 350 V2</div>
 		   </div>
-		    <div class="rectangulo rectangulo_iz">
-		   	    <div class="sneakerbrand">Jordan</div>
-		   	    <img src="../images/Jordan-5-Red-Suede-1.png" class="col-10 sneaker">
-		   	    <div class="sneakername">5 Red Suede</div>
-		   </div> -->
+		    <div class="rectangulo">
+		        <div class="sneakerbrand Black">Nike</div>
+		   	    <img src="../images/Nike-Zoom-Vapor-Air-Jordan-3-Atmos-Black-Jade-709998-031.png" class="col-10 sneaker">
+		   	    <div class="sneakername">Zoom Vapor AJ3 Atmos Black Jade</div>  
+		   	</div>
+
+			<div class="rectangulo">
+		        <div class="sneakerbrand Red">Jordan</div>
+		   	    <img src="../images/aj1ow.png" class="col-10 sneaker">
+		   	    <div class="sneakername">Air Jordan 1 x Off-White</div>
+		   </div>
+
+			<div class="rectangulo">
+		        <div class="sneakerbrand Blue">Fila</div>
+		   	    <img src="../images/filaDisruptor2.png" class="col-10 sneaker">
+		   	    <div class="sneakername">Fila Disruptor 2</div>
+		   </div>
+
+			<div class="rectangulo">
+		        <div class="sneakerbrand White">Nike</div>
+		   	    <img src="../images/nikeaf1hijd.png" class="col-10 sneaker">
+		   	    <div class="sneakername">Nike Air Force 1 Hi</div>
+		   </div>
+
+			<div class="rectangulo">
+		        <div class="sneakerbrand White">Adidas</div>
+		   	    <img src="../images/ultraboosttriplewhite.png" class="col-10 sneaker">
+		   	    <div class="sneakername">Adidas Ultraboost 2.0</div>
+		   </div>
+
+
+			<div class="rectangulo">
+		        <div class="sneakerbrand Black">Adidas</div>
+		   	    <img src="../images/nmdr1.png" class="col-10 sneaker">
+		   	    <div class="sneakername">Adidas NMD R1</div>
+		   </div>
 
     </div>
-
-
-
-
-
 
 
 

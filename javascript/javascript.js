@@ -8,8 +8,22 @@ var imagenes= new Array(
 	);
 
 function goHome(){
-	window.location.assign(home);
+	window.location.href= "homepage.html";
 }
+
+function shoppingCart(){
+	window.location.href = "shoppingcart.html";
+}
+
+function blog(){
+	window.location.href = "blog.html";
+}
+function userpage(){
+	window.location.href = "userpage.html";
+}
+
+
+
 
 onload = function (){
 	
@@ -115,7 +129,7 @@ var filter = false;
 
 function appearFilters(){
  if(document.getElementById("cuerpo").style.display === "none"){
- 	if(filters === false){
+ 	if(filters == false){
 	document.getElementById("filters").style.display = "block";
 	filters = true;
    }
@@ -143,13 +157,13 @@ function selectSize(x){
 
 function applyButton (){
 	if(document.getElementById("Blue").checked == false)applyColorFilters("Blue");
-	if (document.getElementById("Green").checked == false) applyColorFilters("Green");
+	if (document.getElementById("Grey").checked == false) applyColorFilters("Grey");
 	if (document.getElementById("Red").checked == false) applyColorFilters("Red");
 	if (document.getElementById("Yellow").checked == false) applyColorFilters("Yellow");
 	if (document.getElementById("White").checked == false) applyColorFilters("White");
 	if (document.getElementById("Black").checked == false) applyColorFilters("Black");
     
-    /*if(document.getElementById("Adidas").checked == false)applyBrandFilters("Adidas");
+ /*   if(document.getElementById("Adidas").checked == false)applyColorFilters("Adidas");
 	if (document.getElementById("Nike").checked == false) applyBrandFilters("Nike");
 	if (document.getElementById("Reebook").checked == false) applyBrandFilters("Reebook");
 	if (document.getElementById("Jordan").checked == false) applyBrandFilters("Jordan");
@@ -172,7 +186,7 @@ function applyColorFilters(color){
      }
 }
 
-function applyBrandFilters(brand){
+/*function applyBrandFilters(brand){
 
 	for (var i = 0; i <= document.getElementById("search_done").childElementCount-1 ; i++) {
 	     alert(i);		
@@ -180,4 +194,152 @@ function applyBrandFilters(brand){
     		document.getElementById("search_done").children[i].style.display = "none";
     	  }
         }
+}*/
+
+
+function applyBrandFilters(brand){
+
 }
+
+
+var todayA = new Date();
+var expiry = new Date(todayA.getTime() + 365 * 24 * 3600 * 1000); // un año
+var activeUser = "";
+var carrito = new Array(50);
+var carritoCount = 0;
+
+ function setCookie(name, value)
+ {
+
+   document.cookie=name + "=" + value + "; path=/; expires=" + expiry.toUTCString();
+ }
+
+ function putCookie(form)
+  {
+
+   var nombre=form[0].nombre.value;
+   var apellidos=form[0].apellidos.value;
+   var fechanac=form[0].fechanac.value;
+   var genero=escape(form[0].genero.value);
+   var correo= escape(form[0].correo.value);
+   var contrasena= escape(form[0].contrasena.value);
+
+   var data = [nombre, apellidos, fechanac, genero, correo, contrasena];
+   var jsonData = JSON.stringify(data);
+   setCookie(form[0].username.value, jsonData);
+   return true;
+  }
+
+  function getCookie(key){
+    var name = key + "=";
+    var ca = document.cookie.split(';');
+    for (var i=0; i<ca.length; i++){
+      var c = ca[i];
+      while (c.charAt(0)==' ') {
+        c = c.substring(1);
+      }
+      if(c.indexOf(name)==0) {
+        var content = JSON.parse(c.substring(name.length, c.length));
+        return content;
+      }
+
+    }
+    return "";
+  }
+
+
+  function checkCookie(key) {
+
+    var content = getCookie(key);
+
+    if (content!="") {
+        return content;
+    } else{
+        return "";
+    }
+  }
+
+  function login(){
+
+    var content = checkCookie(document.forms["login"]["usuarioLog"].value);
+    if (content!=""){
+      if (document.forms["login"]["contrasenaLog"].value==content[5]){
+        alert("Logeo");
+        activeUser=document.forms["login"];
+        window.location.href = "homepage.html";
+      }else {
+        alert("Contraseña incorrecta");
+      }
+    } else {
+      alert("Usuario incorrecto");
+    }
+  }
+
+  function logOut(){
+    activeUser="";
+    carrito=[];
+  }
+
+  function userButton(){
+    if (activeUser==""){
+         window.location.href = "register.html";
+    } else {
+      window.location.href = "userpage.html";
+    }
+  }
+
+
+
+  function showIt(element){
+    element.style.display="block";
+  }
+
+  function hideIt(element){
+    element.style.display="none";
+  }
+
+  function addShoe(id){
+    carrito[carritoCount] = id;
+    carritoCount++;
+
+    return carrito;
+  }
+
+  function removeShoe(id){
+    for (var i=0; i<40; i++){
+      if (carrito[i]==id){
+        for(var j=i; j<40;j++){
+          carrito[j]=carrito[j+1]
+        }
+      }
+    }
+    carritoCount--;
+
+    return carrito;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
